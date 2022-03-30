@@ -21,7 +21,7 @@ Moringa School Core Students.
 
 ## Project Setup Instructions
 - Open Terminal {Ctrl+Alt+T}     
-- git clone [dona](#)      
+- git clone [dona](https://github.com/ShaviyaVictor/dona)      
 - cd dona      
 - code . or atom . based on the text editor you have.
 
@@ -44,7 +44,7 @@ Moringa School Core Students.
 - Django - for the db
 
 ## License and Copyright Information
-[MIT License](#)
+[MIT License](https://github.com/ShaviyaVictor/dona/blob/main/LICENSE)
    
   
 * **© Group12**, API consumption personal project.        
