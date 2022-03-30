@@ -50,7 +50,7 @@ footer {
 
 .futa {
   margin: 1em;
-  color: #000 !important;
+  color: #FFCB74 !important;
   font-size: 1.5em;
 }
 
@@ -58,7 +58,11 @@ a {
   text-decoration: none;
 }
 
-.futa:hover, a:hover {
+.futa:hover{
+  color: #ffae28  !important;
+}
+
+a:hover {
   color: #FFCB74  !important;
 }
 /* End of Footer styles */

@@ -2,9 +2,9 @@
 
 <header class="site-header">
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top border-bottom">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
     
-    <div class="container">
+    <div class="container  border-bottom">
       <a class="navbar-brand mr-5" routerLink="">
         <h4 class="logo fw-bolder">
           Dona
@@ -15,13 +15,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggle">            
         <div class="navbar-nav mr-auto font-weight-light">
-          <a class="nav-item nav-link" routerLink="">
+          <a class="nav-item nav-link mr-5" routerLink="">
             Gift Catalogue 
           </a>
-          <a class="nav-item nav-link" routerLink="work">
+          <a class="nav-item nav-link mr-5" routerLink="work">
             Our Work
           </a>
-          <a class="nav-item nav-link" routerLink="about">
+          <a class="nav-item nav-link mr-5" routerLink="about">
             About Us
           </a>
 
@@ -55,6 +55,24 @@
 
   <div class="container bottom text-center border-top">
     <div class="mt-2em">
+      
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
       <div class="row d-flex justify-content-center icons">
         <a href="https://github.com/ShaviyaVictor" target="_blank">
           <i class="bi bi-github futa"></i>
