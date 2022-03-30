@@ -27,3 +27,38 @@ a, button {
 }
 
 /* End of NavBar styles */
+
+
+
+
+
+
+/* Start of Footer styles */
+footer {
+  
+  width: 100%;
+  padding: 0.3em;
+}
+
+.mt-2em {
+  margin: 1.5em 0em 1.5em 0em !important;
+}
+
+.icons {
+  display: inline !important;
+}
+
+.futa {
+  margin: 1em;
+  color: #000 !important;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.futa:hover, a:hover {
+  color: #FFCB74  !important;
+}
+/* End of Footer styles */
