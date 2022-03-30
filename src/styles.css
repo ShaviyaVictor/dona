@@ -1,16 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* You can add global styles to this file, and also import other style files */
+  
+/* font-family: 'Lora', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
+/* For titles and headings
+font-family: 'Old Standard TT', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+/* For paragraphs
+font-family: 'Karma', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+/* For Links and NavBar
+font-family: 'Marcellus', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
 
-html, body { height: 100%; }
+
+html { height: 100%; }
 body { 
-  margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
   color: #fff;
   background-color: #2F2F2F;
-  margin-top: 5rem;
+  margin-top: 5em;
 }
+
 
 
 
