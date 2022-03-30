@@ -12,11 +12,11 @@ The project was deployed to GitHub pages for publication.
 To view the [project's live site](#).
 
 #### Authors
-**Abzed Abdul - Project Lead**
-**Grace Mwende - Scrum master**
-**Victor Shaviya**
-**David Kibet**
-**Yahya Noor**
+**Abzed Abdul - Project Lead**       
+**Grace Mwende - Scrum master**       
+**Victor Shaviya**       
+**David Kibet**       
+**Yahya Noor**       
 Moringa School Core Students.
 
 ## Project Setup Instructions
