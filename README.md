@@ -47,7 +47,7 @@ Moringa School Core Students.
 [MIT License](https://github.com/ShaviyaVictor/dona/blob/main/LICENSE)
    
   
-* **© Group12**, API consumption personal project.        
+* **© Group12**, API generation and consumption group project.        
     - [LinkedIn](https://www.linkedin.com/in/victor-shaviya-532ab0110/)          
     - [Instagram](https://www.instagram.com/ignition_reads/)
 
