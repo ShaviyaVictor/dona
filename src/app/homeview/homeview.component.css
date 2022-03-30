@@ -6,8 +6,8 @@
   height: 38vh;
 }
 
-.position {
-  position: relative;
-  left: 33vw;
-  top: 20vh;
+.bgBlue {
+  background-color: #33ACCB;  
+  padding: 3rem;
+  /* margin-top: 5rem; */
 }

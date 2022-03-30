@@ -26,6 +26,10 @@ a, button {
   text-decoration: underline 3px;
 }
 
+.site-header .navbar {
+  background-color: #2F2F2F;
+}
+
 /* End of NavBar styles */
 
 
