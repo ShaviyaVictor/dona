@@ -1,26 +1,55 @@
 # Dona
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.     
+![dona](#)
 
-## Development server
+## Project Description
+This is a Pro-Dev group12 project for Moringa School.         
+The goal is to create a platform that allows users to donate to  charity/charities such as this one  regularly, to enable the organization to meet their goals.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### Live link to site
+The project was deployed to GitHub pages for publication.     
+To view the [project's live site](#).
 
-## Code scaffolding
+#### Authors
+**Abzed Abdul - Project Lead**
+**Grace Mwende - Scrum master**
+**Victor Shaviya**
+**David Kibet**
+**Yahya Noor**
+Moringa School Core Students.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project Setup Instructions
+- Open Terminal {Ctrl+Alt+T}     
+- git clone [dona](#)      
+- cd dona      
+- code . or atom . based on the text editor you have.
 
-## Build
+#### How the project works
+1. See a variety of charities you can donate to.
+2. Create an account on the platform.
+3. Choose and donate to a charity.
+4. Set up automated repeat donation or one-time donation.
+5. See stories about beneficiaries of your donations.
+6. Donate via paypal/stripe or any other third party service.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Technologies Used
+- HTML - to provide the structure of the web application
+- Bootstrap - help in prestyling the application
+- CSS - help provide custom styles for the web application
+- JavaScript - help achieve functionality of the page
+- Angular - to build a SPA
+- Typescript - to define the logic code
+- Django - for the db
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## License and Copyright Information
+[MIT License](#)
+   
+  
+* **© Group12**, API consumption personal project.        
+    - [LinkedIn](https://www.linkedin.com/in/victor-shaviya-532ab0110/)          
+    - [Instagram](https://www.instagram.com/ignition_reads/)
 
 ## Further help
 
