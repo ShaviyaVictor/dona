@@ -1,0 +1,29 @@
+/* Start of NavBar styles */
+body {
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Karma', serif;
+}
+
+a, button {  
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.site-header .navbar-nav .nav-link:hover {
+  text-decoration: underline 3px;
+}
+
+/* End of NavBar styles */
