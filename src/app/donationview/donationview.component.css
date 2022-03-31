@@ -18,3 +18,22 @@
   background-color: #FFF;
   margin: 1rem;
 }
+
+.totals {
+  margin: 1rem;
+}
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media screen and (max-width: 767px) {
+  .content {
+    text-align: center;
+  } 
+}
+
+@media screen and (max-width: 575px) {
+  
+}
