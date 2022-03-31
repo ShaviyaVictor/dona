@@ -9,6 +9,36 @@ import { DonationsapiservicesService } from '../service/donationsapiservices.ser
 })
 export class HomeviewComponent implements OnInit {
 
+  // Dummy data
+  charities = [
+
+    {
+      location: 'Mother of Hope Foundation',
+      image: '../../assets/Image-2.jpg'
+    },
+    {
+      location: 'Okoa Toto Foundation',
+      image: '../../assets/Image-3.jpg'
+    },
+    {
+      location: 'Lea Dada Foundation',
+      image: '../../assets/Image-4.jpg'
+    },
+    {
+      location: 'Nairobi',
+      image: '../../assets/Image-5.jpg'
+    },
+    {
+      location: 'All for One',
+      image: '../../assets/Image-6.jpg'
+    },
+    {
+      location: 'Kisumu',
+      image: '../../assets/Image-7.jpg'
+    },
+
+  ]
+
   constructor(private _service:DonationsapiservicesService) { }
 
   charitiesDisplay: any = [];
