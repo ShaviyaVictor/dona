@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { DonationviewComponent } from './donationview/donationview.component';
 import { WorkviewComponent } from './workview/workview.component';
 import { AboutviewComponent } from './aboutview/aboutview.component';
 import { PaymentviewComponent } from './paymentview/paymentview.component';
+import { DonationsapiservicesService } from './service/donationsapiservices.service'
 
 @NgModule({
   declarations: [
@@ -29,8 +31,11 @@ import { PaymentviewComponent } from './paymentview/paymentview.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DonationsapiservicesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
