@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterviewComponent implements OnInit {
 
+  register:any;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.register = {
+
+      first_name: '',
+      last_name: '',
+      user_name: '',
+      email: '',
+      password: '',
+
+    };
+
   }
 
 }
