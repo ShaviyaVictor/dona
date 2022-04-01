@@ -11,32 +11,32 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg">First Name</label>
-                  <input [(ngModel)]="register.first_name" type="text" id="form3Example1cg" class="form-control form-control-lg"/>
+                  <input [(ngModel)]="register.first_name" name="first" type="text" id="form3Example1cg" class="form-control form-control-lg"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg">Last Name</label>
-                  <input [(ngModel)]="register.last_name" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input [(ngModel)]="register.last_name" name="last" type="text" id="form3Example1cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg">Username *</label>
-                  <input [(ngModel)]="register.user_name" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.user_name" name="username" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3cg">Your Email *</label>
-                  <input [(ngModel)]="register.email" type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.email" name="Email" type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cg">Password *</label>
-                  <input [(ngModel)]="register.password" type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password" name="pw1" type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cdg">Confirm password *</label>
-                  <input [(ngModel)]="register.password" type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password" name="pw2" type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
