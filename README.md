@@ -1,7 +1,8 @@
 # Dona
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.     
-![dona](#)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.        
+![donaHomePg1](https://github.com/ShaviyaVictor/dona/blob/shaviya/src/assets/Screenshot-1.png)              
+![donaHomePg2](https://github.com/ShaviyaVictor/dona/blob/shaviya/src/assets/Screenshot-2.png)
 
 ## Project Description
 This is a Pro-Dev group12 project for Moringa School.         
