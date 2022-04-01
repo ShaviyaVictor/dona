@@ -37,6 +37,30 @@
     </div>
   </div>
 </section>
+
+
+<!-- Looping through trial -->
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4" *ngFor='let charity of charitiesDisplay'>
+      <div class="card mt-4">
+        <img src="../../assets/Image-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{charity.users.email}}</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<!-- End of iteration -->
+
+
+
+<!-- Start of listing the objects -->
+
 <section class="container mt-3">
   <div class="card-deck">
     <div class="card">
@@ -101,5 +125,10 @@
         </a>        
       </div>
     </div>
+  </div>
+  <div *ngFor='let charity of charitiesDisplay'>
+
+    {{charity.users}}
+
   </div>
 </section>
