@@ -1,0 +1,39 @@
+.bgWhite {
+  background-color: #FFF;
+  color: black;
+  padding: 2rem;
+  padding-top: 3rem;
+  border-radius: 7px;
+}
+
+.custom-select {
+  background-color: #E9ECEF;
+}
+
+.txtGroup {
+  padding: 1.5rem;
+}
+
+.content {
+  background-color: #FFF;
+  margin: 1rem;
+}
+
+.totals {
+  margin: 1rem;
+}
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media screen and (max-width: 767px) {
+  .content {
+    text-align: center;
+  } 
+}
+
+@media screen and (max-width: 575px) {
+  
+}
