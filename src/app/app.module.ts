@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,8 @@ import { DonationviewComponent } from './donationview/donationview.component';
 import { WorkviewComponent } from './workview/workview.component';
 import { AboutviewComponent } from './aboutview/aboutview.component';
 import { PaymentviewComponent } from './paymentview/paymentview.component';
-import { DonationsapiservicesService } from './service/donationsapiservices.service'
+import { DonationsapiservicesService } from './service/donationsapiservices.service';
+import { UserRegisterService } from './service/user-register.service';
 
 @NgModule({
   declarations: [
@@ -33,10 +34,12 @@ import { DonationsapiservicesService } from './service/donationsapiservices.serv
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     DonationsapiservicesService,
+    UserRegisterService,
+    
   ],
   bootstrap: [AppComponent]
 })

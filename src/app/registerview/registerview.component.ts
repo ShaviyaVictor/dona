@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserRegisterService } from '../service/user-register.service'
 
 @Component({
   selector: 'app-registerview',
@@ -9,7 +10,7 @@ export class RegisterviewComponent implements OnInit {
 
   register:any;
 
-  constructor() { }
+  constructor(private _service:UserRegisterService) { }
 
   ngOnInit(): void {
 
@@ -22,6 +23,12 @@ export class RegisterviewComponent implements OnInit {
       password: '',
 
     };
+
+  }
+
+  registration(){
+
+    this._service
 
   }
 
