@@ -39,6 +39,11 @@
   text-decoration: underline #33ACCB;
 }
 
+.huvaLink:hover {
+  color: #33ACCB !important;
+  text-decoration: underline #33ACCB;
+}
+
 
 
 

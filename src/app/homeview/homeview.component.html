@@ -38,22 +38,25 @@
   </div>
 </section>
 
-
 <!-- Looping through trial -->
 
-<!-- <div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4" *ngFor='let charity of charitiesDisplay'>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col-md-3 mb-4" *ngFor='let charity of charitiesDisplay'>
       <div class="card mt-4">
-        <img src="../../assets/Image-2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{charity.users.email}}</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" routerLink="donation">        
+          <img src="https://donationapp254.herokuapp.com{{ charity.charity_image }}" class="card-img-top" alt="{{charity.location}}">
+        </a>
+        
+        <div class="card-body text-center">
+          <a href="#" routerLink="donation">
+            <h5 class="card-title text-white huvaLink">{{charity.users.user_name}}</h5>
+          </a>
         </div>
       </div>      
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- End of iteration -->
 
@@ -61,7 +64,7 @@
 
 <!-- Start of listing the objects -->
 
-<section class="container mt-3">
+<!-- <section class="container mt-3">
   <div class="card-deck">
     <div class="card">
       <a href="#">
@@ -126,9 +129,4 @@
       </div>
     </div>
   </div>
-  <!-- <div *ngFor='let charity of charitiesDisplay'>
-
-    {{charity.users}}
-
-  </div> -->
-</section>
+</section> -->
