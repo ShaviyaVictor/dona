@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 
-import { DonationsapiservicesService } from '../service/donationsapiservices.service'
+import { DonationsapiservicesService } from '../service/donationsapiservices.service';
 
 @Component({
   selector: 'app-donationview',
@@ -9,7 +10,7 @@ import { DonationsapiservicesService } from '../service/donationsapiservices.ser
 })
 export class DonationviewComponent implements OnInit {
 
-  constructor(private _service:DonationsapiservicesService) { }
+  constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute) { }
 
   charityDisplayed: any = [];
 
@@ -19,6 +20,8 @@ export class DonationviewComponent implements OnInit {
 
       console.log(data);
       this.charityDisplayed = data
+
+      console.log(this._route.snapshot.params['id']);
       
     });
 

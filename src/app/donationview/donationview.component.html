@@ -1,44 +1,38 @@
 <div class="container">
   <div class="row bgWhite">
 
-
-
-    <ng-container *ngFor="let donateTo of charityDisplayed; let i = index">
-      <div class="col-sm-3">
-        <h5>
-          HOPE Worldwide and {{ donateTo.location }}
+    <div class="col-sm-3" *ngFor="let donateTo of charityDisplayed | keyvalue; let i = index">
+        <h5 class="pb-4" *ngIf="donateTo.key == 'location'">
+          Charity in {{ donateTo.value }}
         </h5>
-      </div>
-      <div class="col-sm-4">
-        <div class="input-group mb-2 mr-sm-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text">$</div>
-          </div>
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
-          <div class="input-group-append">
-            <select class="custom-select" id="inputGroupSelect01">
-              <option selected>ONE-TIME</option>
-              <option value="1">MONTHLY</option>
-              <option value="2">YEARLY</option>
-            </select>
-          </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">$</div>
         </div>
-        
-      </div>
-      <div class="col-sm-3">
-        <div class="row d-flex justify-content-center">
-          <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
-        </div>
-        <div class="row d-flex justify-content-center">
-          <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
+        <div class="input-group-append">
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>ONE-TIME</option>
+            <option value="1">MONTHLY</option>
+            <option value="2">YEARLY</option>
+          </select>
         </div>
       </div>
-      <div class="col-sm-2 d-flex justify-content-center">
-        $ 50
+      
+    </div>
+    <div class="col-sm-3">
+      <div class="row d-flex justify-content-center">
+        <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
       </div>
-    </ng-container>
-
-    
+      <div class="row d-flex justify-content-center">
+        <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
+      </div>
+    </div>
+    <div class="col-sm-2 d-flex justify-content-center">
+      $ 50
+    </div>
 
   </div>
 </div>
