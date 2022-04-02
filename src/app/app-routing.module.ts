@@ -14,7 +14,7 @@ const routes: Routes = [
   { path:'login', component:LoginviewComponent },
   { path:'register', component:RegisterviewComponent },
   { path:'', component:HomeviewComponent },
-  { path:'donation', component:DonationviewComponent },
+  { path:'donation/:id', component:DonationviewComponent },
   { path:'work', component:WorkviewComponent },
   { path:'about', component:AboutviewComponent },
   { path:'payment', component:PaymentviewComponent },

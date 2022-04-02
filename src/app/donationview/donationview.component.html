@@ -1,38 +1,44 @@
 <div class="container">
   <div class="row bgWhite">
 
-    <div class="col-sm-3">
-      <h5>
-        HOPE Worldwide
-      </h5>
-    </div>
-    <div class="col-sm-4">
-      <div class="input-group mb-2 mr-sm-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">$</div>
+
+
+    <ng-container *ngFor="let donateTo of charityDisplayed; let i = index">
+      <div class="col-sm-3">
+        <h5>
+          HOPE Worldwide and {{ donateTo.location }}
+        </h5>
+      </div>
+      <div class="col-sm-4">
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">$</div>
+          </div>
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
+          <div class="input-group-append">
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>ONE-TIME</option>
+              <option value="1">MONTHLY</option>
+              <option value="2">YEARLY</option>
+            </select>
+          </div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
-        <div class="input-group-append">
-          <select class="custom-select" id="inputGroupSelect01">
-            <option selected>ONE-TIME</option>
-            <option value="1">MONTHLY</option>
-            <option value="2">YEARLY</option>
-          </select>
+        
+      </div>
+      <div class="col-sm-3">
+        <div class="row d-flex justify-content-center">
+          <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
         </div>
       </div>
-      
-    </div>
-    <div class="col-sm-3">
-      <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
+      <div class="col-sm-2 d-flex justify-content-center">
+        $ 50
       </div>
-      <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
-      </div>
-    </div>
-    <div class="col-sm-2 d-flex justify-content-center">
-      $ 50
-    </div>
+    </ng-container>
+
+    
 
   </div>
 </div>
@@ -53,7 +59,7 @@
               Girl Sponsorship >
             </h5>
             <h6 class="text-dark">
-              Sponsoring a child is the most<br>powerful way you can fight poverty.
+              Sponsoring a child is the most<br>powerful way you can fight poverty. routerLink="donation"
             </h6>
           </div>
         </div>
