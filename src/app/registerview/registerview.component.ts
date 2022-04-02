@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegisterService } from '../service/user-register.service'
+import { UserRegisterService } from '../service/user-register.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-registerview',
@@ -10,7 +11,7 @@ export class RegisterviewComponent implements OnInit {
 
   register:any;
 
-  constructor(private _service:UserRegisterService) { }
+  constructor(private _service:UserRegisterService, private _route:Router) { }
 
   ngOnInit(): void {
 
@@ -31,9 +32,13 @@ export class RegisterviewComponent implements OnInit {
     this._service.registeredProps(this.register).subscribe((userData)=>{
       alert('User ' + this.register.user_name + ' has been created successfully.')
     },
-    error => console.log('error', error)
+    // error => console.log('error', error)
     );
 
+  }
+
+  loginRedirect(pageName:string) {
+    this._route.navigate([`${pageName}`]);
   }
 
 }
