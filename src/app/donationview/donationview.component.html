@@ -7,13 +7,14 @@
         </h5>
     </div>
     <div class="col-sm-4">
+
       <div class="input-group mb-2 mr-sm-2">
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
+        <input type="text" #amount (keyup)="getValue(amount.value)" class="form-control" id="amount" placeholder="50">
         <div class="input-group-append">
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="selection">
             <option selected>ONE-TIME</option>
             <option value="1">MONTHLY</option>
             <option value="2">YEARLY</option>
@@ -53,7 +54,7 @@
               Girl Sponsorship >
             </h5>
             <h6 class="text-dark">
-              Sponsoring a child is the most<br>powerful way you can fight poverty. routerLink="donation"
+              Sponsoring a child is the most<br>powerful way you can fight poverty.
             </h6>
           </div>
         </div>

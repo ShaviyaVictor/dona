@@ -10,6 +10,10 @@ import { DonationsapiservicesService } from '../service/donationsapiservices.ser
 })
 export class DonationviewComponent implements OnInit {
 
+  getValue(val:string) {
+    console.warn(val)
+  }
+
   constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute) { }
 
   charityDisplayed: any = [];
@@ -26,5 +30,6 @@ export class DonationviewComponent implements OnInit {
     });
 
   }
+
 
 }
