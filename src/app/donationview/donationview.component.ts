@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 
 import { DonationsapiservicesService } from '../service/donationsapiservices.service';
+import { render } from 'creditcardpayments/creditCardPayments';
 
 @Component({
   selector: 'app-donationview',
@@ -10,11 +11,30 @@ import { DonationsapiservicesService } from '../service/donationsapiservices.ser
 })
 export class DonationviewComponent implements OnInit {
 
-  getValue(val:string) {
+  displayVal1:string = '';
+  getValue1(val:string) {
     console.warn(val)
+    this.displayVal1 = val
   }
 
-  constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute) { }
+  displayVal2:string = '';
+  getValue2(val:string) {
+    console.warn(val)
+    this.displayVal2 = val
+  }
+
+  constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute) { 
+    render(
+     { 
+      id: '#myPaypalButtons',
+      currency: 'USD',
+      value: '100.00',
+      onApprove: (details) => {
+        alert('Transaction successfull');
+      }       
+      }
+    )
+  }
 
   charityDisplayed: any = [];
 

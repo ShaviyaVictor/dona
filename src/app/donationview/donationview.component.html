@@ -12,12 +12,13 @@
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="text" #amount (keyup)="getValue(amount.value)" class="form-control" id="amount" placeholder="50">
+        <input type="text" #amount class="form-control" id="amount" placeholder="50">
         <div class="input-group-append">
-          <select class="custom-select" id="selection">
-            <option selected>ONE-TIME</option>
-            <option value="1">MONTHLY</option>
-            <option value="2">YEARLY</option>
+          <select #frequency class="custom-select" id="selection" required>
+            <option selected>Choose frequency...</option>
+            <option value="ONE-TIME">ONE-TIME</option>
+            <option value="MONTHLY">MONTHLY</option>
+            <option value="YEARLY">YEARLY</option>
           </select>
         </div>
       </div>
@@ -25,14 +26,16 @@
     </div>
     <div class="col-sm-3">
       <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
+        <button (click)="getValue1(amount.value); getValue2(frequency.value)" type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
       </div>
-      <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
-      </div>
+      <!-- <div class="row d-flex justify-content-center">
+        <button type="submit" class="btn text-danger ml-3 mb-3">Remove</button>
+      </div> -->
     </div>
     <div class="col-sm-2 d-flex justify-content-center">
-      $ 50
+      <strong>
+        $ {{ displayVal1 }}
+      </strong>
     </div>
 
   </div>
@@ -64,10 +67,10 @@
       <div class="totals">
         <div class="row">
           <div class="col-8">
-            ONE-TIME Giving
+            {{ displayVal2 }} Giving Frequency
           </div>
           <div class="col-4">
-            $ 50
+            $ {{ displayVal1 }}
           </div>
         </div>
         <div class="row pt-4 font-weight-bold">
@@ -75,11 +78,15 @@
             TOTAL
           </div>
           <div class="col-4">
-            $ 50
+            $ {{ displayVal1 }}
           </div>
         </div>
         <div class="row d-flex justify-content-center pt-3">
-          <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button>
+          
+          <div id="myPaypalButtons">
+            <!-- <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button> -->
+          </div>
+
         </div>
         <div class="row d-flex justify-content-center pt-1">
           <h5>
