@@ -14,6 +14,7 @@ import { WorkviewComponent } from './workview/workview.component';
 import { AboutviewComponent } from './aboutview/aboutview.component';
 import { PaymentviewComponent } from './paymentview/paymentview.component';
 import { DonationsapiservicesService } from './service/donationsapiservices.service'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { DonationsapiservicesService } from './service/donationsapiservices.serv
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     DonationsapiservicesService,
