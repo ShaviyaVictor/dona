@@ -16,7 +16,6 @@ import { AboutviewComponent } from './aboutview/aboutview.component';
 import { PaymentviewComponent } from './paymentview/paymentview.component';
 import { UserRegisterService } from './service/user-register.service';
 import { DonationsapiservicesService } from './service/donationsapiservices.service'
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
