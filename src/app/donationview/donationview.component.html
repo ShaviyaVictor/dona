@@ -1,22 +1,23 @@
 <div class="container">
   <div class="row bgWhite">
 
-    <div class="col-sm-3">
-      <h5>
-        HOPE Worldwide
-      </h5>
+    <div class="col-sm-3" *ngFor="let donateTo of charityDisplayed | keyvalue; let i = index">
+        <h5 class="pb-4" *ngIf="donateTo.key == 'location'">
+          Charity in {{ donateTo.value }}
+        </h5>
     </div>
     <div class="col-sm-4">
+
       <div class="input-group mb-2 mr-sm-2">
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="50">
+        <input type="number" [(ngModel)]="finalAmount" #amount class="form-control" id="amount" placeholder="50">
         <div class="input-group-append">
-          <select class="custom-select" id="inputGroupSelect01">
-            <option selected>ONE-TIME</option>
-            <option value="1">MONTHLY</option>
-            <option value="2">YEARLY</option>
+          <select #frequency class="custom-select" id="selection" required>
+            <option value="ONE-TIME">ONE-TIME</option>
+            <option value="MONTHLY">MONTHLY</option>
+            <option value="YEARLY">YEARLY</option>
           </select>
         </div>
       </div>
@@ -24,14 +25,16 @@
     </div>
     <div class="col-sm-3">
       <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
+        <button (click)="getValue1(amount.value); getValue2(frequency.value)" type="submit" class="btn btn-info ml-3 mb-3">UPDATE</button>
       </div>
-      <div class="row d-flex justify-content-center">
-        <button type="submit" class="btn text-info ml-3 mb-3">Remove</button>
-      </div>
+      <!-- <div class="row d-flex justify-content-center">
+        <button type="submit" class="btn text-danger ml-3 mb-3">Remove</button>
+      </div> -->
     </div>
     <div class="col-sm-2 d-flex justify-content-center">
-      $ 50
+      <strong>
+        $ {{ displayVal1 }}
+      </strong>
     </div>
 
   </div>
@@ -63,22 +66,28 @@
       <div class="totals">
         <div class="row">
           <div class="col-8">
-            ONE-TIME Giving
+            Give <strong>
+              {{ displayVal2 }}
+            </strong>
           </div>
           <div class="col-4">
-            $ 50
+            $ {{ displayVal1 }}
           </div>
         </div>
-        <div class="row pt-4 font-weight-bold">
+        <div class="row pt-4 font-weight-bold pb-3">
           <div class="col-8">
             TOTAL
           </div>
           <div class="col-4">
-            $ 50
+            $ {{ displayVal1 }}
           </div>
         </div>
         <div class="row d-flex justify-content-center pt-3">
-          <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button>
+          
+          <div class="btn-lg-lg" id="myPaypalButtons">
+            <!-- <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button> -->
+          </div>
+
         </div>
         <div class="row d-flex justify-content-center pt-1">
           <h5>
@@ -86,7 +95,7 @@
           </h5>
         </div>
         <div class="row d-flex justify-content-center pt-1">
-          <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation">CHECKOUT ANONYMOUSLY</button>
+          <button type="submit" class="floating btn btn-warning ml-3 mb-3" routerLink="donation">CHECKOUT ANONYMOUSLY</button>
         </div>
       </div>
     </div>

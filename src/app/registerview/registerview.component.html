@@ -10,33 +10,77 @@
               <form>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example1cg">First Name</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg1">First Name</label>
+                  <input [(ngModel)]="register.first_name" name="first" type="text" id="form3Example1cg1" class="form-control form-control-lg"/>
+                </div>                                
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1cg2">Last Name</label>
+                  <input [(ngModel)]="register.last_name" name="last" type="text" id="form3Example1cg2" class="form-control form-control-lg" required/>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example1cg">Last Name</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg3">Username *</label>
+                  <input [(ngModel)]="register.user_name" name="username" type="text" id="form3Example1cg3" class="form-control form-control-lg" required minlength="4" #name='ngModel'/>
                 </div>
-
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example1cg">Username *</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert text-danger">
+            
+                  <div *ngIf="name.errors?.['required']">
+                    <small>Field required!</small>
+                  </div>
+                  <div *ngIf="name.errors?.['minlength']">
+                    <small>The username must be at least 6 characters long.</small>
+                  </div>
+                
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3cg">Your Email *</label>
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.email" name="Email" type="email" id="form3Example3cg" class="form-control form-control-lg" required minlength="12" #name1='ngModel'/>
+                </div>
+                <div *ngIf="name1.invalid && (name1.dirty || name1.touched)"
+                class="alert text-danger">
+            
+                  <div *ngIf="name1.errors?.['required']">
+                    <small>Field required!</small>
+                  </div>
+                  <div *ngIf="name1.errors?.['minlength']">
+                    
+                  </div>
+                <small>Email field must be at least 12 characters long.</small>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cg">Password *</label>
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password" name="pw1" type="password" id="form3Example4cg" class="form-control form-control-lg" required minlength="8" #name2='ngModel'/>
+                </div>
+                <div *ngIf="name2.invalid && (name2.dirty || name2.touched)"
+                class="alert text-danger">
+            
+                  <div *ngIf="name2.errors?.['required']">
+                    <small>Field required!</small>
+                  </div>
+                  <div *ngIf="name2.errors?.['minlength']">
+                    <small>Password field must be at least 8 characters long.</small>
+                  </div>
+                
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cdg">Confirm password *</label>
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password1" name="pw2" type="password" id="form3Example4cdg" class="form-control form-control-lg" required minlength="8" #name3='ngModel'/>
+                </div>
+                <div *ngIf="name3.invalid && (name3.dirty || name3.touched)"
+                class="alert text-danger">
+            
+                  <div *ngIf="name3.errors?.['required']">
+                    <small>Field required!</small>
+                  </div>
+                  <div *ngIf="name3.errors?.['minlength']">
+                    <small>Passwords must match</small>
+                  </div>
+                
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
@@ -47,7 +91,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-warning btn-block btn-lg gradient-custom-4 text-body">REGISTER</button>
+                  <button (click)="registration(); loginRedirect('/login');" type="button" class="btn btn-warning btn-block btn-lg gradient-custom-4 text-body">REGISTER</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Already have a Dona account? <a href="login" class="fw-bold text-info"><u>Login here</u></a></p>
