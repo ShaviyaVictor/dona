@@ -7,36 +7,36 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Join Us</h2>
 
-              <form>
+              <form [formGroup]="registerForm">
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg1">First Name</label>
-                  <input [(ngModel)]="register.first_name" name="first" type="text" id="form3Example1cg1" class="form-control form-control-lg"/>
+                  <input [(ngModel)]="register.first_name" name="first" type="text" id="form3Example1cg1" class="form-control form-control-lg" formControlName="firstN"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg2">Last Name</label>
-                  <input [(ngModel)]="register.last_name" name="last" type="text" id="form3Example1cg2" class="form-control form-control-lg" />
+                  <input [(ngModel)]="register.last_name" name="last" type="text" id="form3Example1cg2" class="form-control form-control-lg" formControlName="lastN"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg3">Username *</label>
-                  <input [(ngModel)]="register.user_name" name="username" type="text" id="form3Example1cg3" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.user_name" name="username" type="text" id="form3Example1cg3" class="form-control form-control-lg"  formControlName="userN"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3cg">Your Email *</label>
-                  <input [(ngModel)]="register.email" name="Email" type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.email" name="Email" type="email" id="form3Example3cg" class="form-control form-control-lg"  formControlName="email"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cg">Password *</label>
-                  <input [(ngModel)]="register.password" name="pw1" type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password" name="pw1" type="password" id="form3Example4cg" class="form-control form-control-lg"  formControlName="password"/>
                 </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cdg">Confirm password *</label>
-                  <input [(ngModel)]="register.password" name="pw2" type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
+                  <input [(ngModel)]="register.password1" name="pw2" type="password" id="form4Example4cdg" class="form-control form-control-lg"  formControlName="password1"/>
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">

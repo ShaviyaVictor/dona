@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegisterService } from '../service/user-register.service';
 import { Router } from '@angular/router'
+import { FormGroup, FormControl } from '@angular/forms'
+
+import { UserRegisterService } from '../service/user-register.service';
 
 @Component({
   selector: 'app-registerview',
@@ -8,6 +10,17 @@ import { Router } from '@angular/router'
   styleUrls: ['./registerview.component.css']
 })
 export class RegisterviewComponent implements OnInit {
+
+  registerForm = new FormGroup({
+
+    firstN: new FormControl(''),
+    lastN: new FormControl(''),
+    userN: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    password2: new FormControl(''),
+
+  })
 
   register:any;
 
@@ -22,6 +35,7 @@ export class RegisterviewComponent implements OnInit {
       user_name: '',
       email: '',
       password: '',
+      password1: '',
 
     };
 
@@ -30,7 +44,7 @@ export class RegisterviewComponent implements OnInit {
   registration(){
 
     this._service.registeredProps(this.register).subscribe((userData)=>{
-      // alert('User ' + this.register.user_name + ' has been created successfully.')
+      alert('User ' + this.register.user_name + ' has been created successfully.')
     },
     // error => console.log('error', error)
     );
