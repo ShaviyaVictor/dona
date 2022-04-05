@@ -1,11 +1,10 @@
 <div class="container login">
-    <form class="card-body login-card-body mt-0"  action="" method="POST" autocomplete="off">
+    <div id="form" class="card-body login-card-body mt-0 "  autocomplete="off">
         <h1 class=" text-center mb-4 fw-normal">User Login</h1>
-      
           <div class="form-group">
             <div class="">
               <label for="">Email *</label>
-            <input type="email" name="email" class="form-control" placeholder = "example@gmail.com" required><br>
+            <input type="email" [(ngModel)]="input.username" class="form-control" placeholder = "example@gmail.com" required><br>
     
           </div>
           </div>
@@ -13,16 +12,18 @@
           <div class="form-group">
             <div class="">
               <label for="">Password *</label>
-            <input type="password"  name="password" class="form-control" required><br>
+            <input type="password"  [(ngModel)]="input.password" class="form-control" placeholder="Password" required><br>
     
           </div>
           </div> 
         
-          <div class="form-group">           
-                <input type="submit" name="login" class="form-control btn btn-warning"    value="SIGN IN"><br>
+          <div class="form-group">   
+
+                <input type="submit" (click)="onLogin()"  class="form-control btn btn-warning" value="SIGN IN"><br>
           </div>
-          <h3 class=" mt-4">
-            <a routerLink="/register" class="text-white">Don't have a Dona account? &nbsp; Register</a>
-          </h3>
-    </form>
+          <p class=" mt-4">Don't have a Dona account?
+         
+            <a routerLink="/register" class="text-primary" style="text-decoration: underline;"> Register here</a>
+          </p>
+    </div>
 </div>
