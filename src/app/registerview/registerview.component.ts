@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { FormGroup, FormControl } from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 import { UserRegisterService } from '../service/user-register.service';
 
@@ -11,16 +11,20 @@ import { UserRegisterService } from '../service/user-register.service';
 })
 export class RegisterviewComponent implements OnInit {
 
-  registerForm = new FormGroup({
+  // registerForm = new FormGroup({
 
-    firstN: new FormControl(''),
-    lastN: new FormControl(''),
-    userN: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    password2: new FormControl(''),
+  //   firstN: new FormControl(''),
+  //   lastN: new FormControl(''),
+  //   userN: new FormControl(''),
+  //   email: new FormControl(''),
+  //   password: new FormControl(''),
+  //   password2: new FormControl(''),
 
-  })
+  // });
+
+  // registerUser() {
+  //   console.warn(this.registerForm)
+  // }
 
   register:any;
 
