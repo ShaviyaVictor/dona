@@ -7,7 +7,7 @@
     <div class="row data mt-3">
         <div class="col-xs-4 col-sm-4 col-md-4" *ngFor="let work of allworks">
             <div class="mywork">
-                
+
                     <img style="width: 100%;" src="https://res.cloudinary.com/gracemwende/{{work.user_image}}" alt="{{work.title}}">
               
 
@@ -52,7 +52,8 @@
                             </div>
                             <!-- <div class="form-group text-dark">
                                 <select formControlName="charity">
-                                    <option *ngFor="let work of allworks" [ngValue]="work.id">{{work.charity}}</option>
+
+                                    <option *ngFor="let work of allworks" >{{work.charity.users.user_name}}</option>
 
                                 </select> -->
                                 <!-- <input type="hidden" [(ngModel)]="beneficiary.charity" value="jitegemee"> -->
