@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { OurWorkService } from '../our-work.service';
 
@@ -14,14 +15,14 @@ export class WorkviewComponent implements OnInit {
 
   beneficiary!:FormGroup;
   
-    constructor( private ourWorkService:OurWorkService) { }
+    constructor( private ourWorkService:OurWorkService, private router:Router) { }
   
     ngOnInit(): void {
   
       this.beneficiary=new FormGroup({
         title: new FormControl(''),
         description: new FormControl(''),
-        charity: new FormControl(''),
+        // charity: new FormControl(''),
         user_image: new FormControl('')
       });
   
@@ -38,14 +39,18 @@ export class WorkviewComponent implements OnInit {
     }
   
     onSubmit(){
-      
+
       console.log("Output",this.beneficiary.value);
-      this.ourWorkService.addBeneficiary2(this.f['title'].value,this.f['description'].value,this.f['charity'].value,this.f['user_image'].value,).pipe(first()).subscribe(
+      this.ourWorkService.addBeneficiary2(this.f['title'].value,this.f['description'].value,this.f['user_image'].value,).pipe(first()).subscribe(
       (data:any)=>{
+        this.router.navigate(['/work']);
         console.log(data);
-        
       }
       )
+    }
+
+    workRedirect(pageName:string){
+      this.router.navigate([`${pageName}`])
     }
   
     
