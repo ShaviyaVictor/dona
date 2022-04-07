@@ -48,7 +48,7 @@ export class RegisterviewComponent implements OnInit {
   registration(){
 
     this._service.registeredProps(this.register).subscribe((userData)=>{
-      // alert('User ' + this.register.user_name + ' has been created successfully.')
+      alert('User ' + this.register.user_name + ' has been created successfully.')
     },
     // error => console.log('error', error)
     );
