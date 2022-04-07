@@ -13,7 +13,7 @@ export class DonationsapiservicesService {
   charitiesApiUrl = 'https://donationapp254.herokuapp.com/api/charities/';
 
   // Providing the charity by id api
-  charityByIdUrl = 'https://donationapp254.herokuapp.com/api/charities/charities-id/3'
+  charityByIdUrl = 'https://donationapp254.herokuapp.com/api/charities/charities-id/5'
 
   // Creating a function to grab the objects from the api
   charitiesProps():Observable<any> {

@@ -56,6 +56,8 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  
+
   addPaypalScript() {
     this.addScript = true;
     return new Promise((resolve, reject) => {

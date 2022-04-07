@@ -2,7 +2,7 @@
   <div class="row bgWhite">
 
     <div class="col-sm-3" *ngFor="let donateTo of charityDisplayed | keyvalue; let i = index">
-        <h5 class="pb-4" *ngIf="donateTo.key == 'location'">
+        <h5 class="pb-4" *ngIf="donateTo.key == 'id'">
           Charity in {{ donateTo.value }}
         </h5>
     </div>
