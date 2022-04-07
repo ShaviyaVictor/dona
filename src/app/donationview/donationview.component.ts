@@ -1,8 +1,8 @@
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Route, Router } from '@angular/router'
 
 import { DonationsapiservicesService } from '../service/donationsapiservices.service';
-import { render } from 'creditcardpayments/creditCardPayments';
+// import { render } from 'creditcardpayments/creditCardPayments';
 
 declare let paypal:any;
 
@@ -74,7 +74,7 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
 
   // End of express paypal checkout
 
-
+  // Getting the data from the form inputs
 
   displayVal1:string = '';
 
@@ -91,7 +91,9 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
     this.displayVal2 = val
   }
 
-  constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute) { 
+  // End of getting the form inputs data
+
+  constructor(private _service:DonationsapiservicesService, private _route:ActivatedRoute, private route:Router) { 
     // render(
     //  { 
     //   id: '#myPaypalButtons',
@@ -104,20 +106,66 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
     // )
   }
 
-  charityDisplayed: any = [];
+  charityDisplayed: Array<any> = [];
+  charity: any;
 
   ngOnInit(): void {
 
-    this._service.charityProp().subscribe((data)=>{
+    // this._service.charityProp().subscribe((data)=>{
 
-      console.log(data);
-      this.charityDisplayed = data
+    //   console.log(data);
+    //   this.charityDisplayed = data
 
-      console.log(this._route.snapshot.params['id']);
+    //   console.log(this._route.snapshot.params['id']);
       
+    // });
+
+
+    // this.getData();
+
+
+    let id = 0;
+
+    this._route.paramMap.subscribe(( data:any ) => {
+      // console.log('Data received is');
+      id = data.params.id
+    
+
+    this._service.charitiesProps().subscribe((data)=>{
+
+      this.charityDisplayed = data
+      this.charityDisplayed = this.charityDisplayed.filter((data :any) => data.id == id);
+
+      if(this.charityDisplayed.length <= 0) {
+        this.route.navigateByUrl('');
+      }
+
+      this.charity = this.charityDisplayed[0];
+
+      console.log(this.charity)
+
+      // console.log(data);
+      // this.charitiesDisplay = data
+
     });
 
+  })
+
   }
+
+  // public id = '';
+  // public charity: any;
+  // public location: any;
+  // public charity_image: any;
+
+  // charities!: any[]
+
+  // getData() {
+  //   return this._service.getCharity(this.id).subscribe(data => {
+  //     console.log(data)
+  //     this.location = data.location
+  //   })
+  // }
 
 
 }
