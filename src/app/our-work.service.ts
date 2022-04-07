@@ -17,7 +17,7 @@ export class OurWorkService {
   constructor( private http:HttpClient) { }
 
   ourWork():Observable<any>{
-    return this.http.get(this.api_url+ 'api/benefactor_stories/')
+    return this.http.get(this.api_url+ 'api/beneficiaries/')
     .pipe(
       map((res: any) => {
         return res;
@@ -26,13 +26,13 @@ export class OurWorkService {
   }
 
   addBeneficiary(newBeneficiary:any):Observable<any>{
-    return this.http.post(this.api_url+ 'api/benefactor_stories/',newBeneficiary)
+    return this.http.post(this.api_url+ 'api/beneficiaries/',newBeneficiary)
   }
 
-  addBeneficiary2(title:string,description:string,charity:string, user_image:File){
+  addBeneficiary2(title:string,description:string, user_image:File){
 
-    return this.http.post<any>(this.api_url + 'api/benefactor_stories/',
-    {title,description,charity,user_image },httpOptions ).pipe(
+    return this.http.post<any>(this.api_url + 'api/beneficiaries/',
+    {title,description,user_image },httpOptions ).pipe(
       map((work:any)=>{}));
   }
 
