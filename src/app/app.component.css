@@ -22,9 +22,9 @@ a, button {
 }
 
 
-.site-header .navbar-nav .nav-link:hover {
+/* .site-header .navbar-nav .nav-link:hover {
   text-decoration: underline 3px;
-}
+} */
 
 .site-header .navbar {
   background-color: #2F2F2F;
