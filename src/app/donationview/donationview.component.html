@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row bgWhite">
 
-    <div class="col-sm-3" *ngFor="let donateTo of charityDisplayed | keyvalue; let i = index">
+    <!-- <div class="col-sm-3" *ngFor="let donateTo of charityDisplayed | keyvalue; let i = index">
         <h5 class="pb-4" *ngIf="donateTo.key == 'location'">
           Charity in {{ donateTo.value }}
         </h5>
+    </div> -->
+    <div class="col-sm-3">
+      <h5 class="pb-4">
+        Giving to {{ charity?.charity.user_name }}
+      </h5>
     </div>
     <div class="col-sm-4">
 
@@ -15,6 +20,7 @@
         <input type="number" [(ngModel)]="finalAmount" #amount class="form-control" id="amount" placeholder="50">
         <div class="input-group-append">
           <select #frequency class="custom-select" id="selection" required>
+            <option selected disabled hidden value="">Giving frequency</option>
             <option value="ONE-TIME">ONE-TIME</option>
             <option value="MONTHLY">MONTHLY</option>
             <option value="YEARLY">YEARLY</option>
@@ -89,14 +95,14 @@
           </div>
 
         </div>
-        <div class="row d-flex justify-content-center pt-1">
+        <!-- <div class="row d-flex justify-content-center pt-1">
           <h5>
             Or
           </h5>
         </div>
         <div class="row d-flex justify-content-center pt-1">
           <button type="submit" class="floating btn btn-warning ml-3 mb-3" routerLink="donation">CHECKOUT ANONYMOUSLY</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

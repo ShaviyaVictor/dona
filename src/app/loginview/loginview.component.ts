@@ -13,7 +13,7 @@ export class LoginviewComponent implements OnInit {
   title = 'frontend';
   input:any;
   myform!: FormGroup;
-      constructor(private authService:AuthService,private router:Router) { }
+      constructor(private authService:AuthService, private router:Router) { }
       ngOnInit(): void {
         this.input={
           username:'',
