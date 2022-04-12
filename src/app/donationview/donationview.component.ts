@@ -159,10 +159,11 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
 
   }
 
-  donation(){
+  donating(){
 
     this._service.donationsMade(this.sent).subscribe((userData)=>{
-      alert('Amount ' + this.sent.amount + ' USD has been posted successfully.')
+      // alert('Amount ' + this.sent.amount + ' USD has been posted successfully.')
+      console.warn('It is all good')
     },
     // error => console.log('error', error)
     );
