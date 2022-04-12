@@ -13,6 +13,7 @@ export class DonationsapiservicesService {
   charitiesApiUrl = 'https://donationapp254.herokuapp.com/api/charities/';
 
   // Providing the charity by id api
+
   // charityByIdUrl = 'https://donationapp254.herokuapp.com/api/charities/charities-id/4'
 
 

@@ -2,7 +2,7 @@ import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router'
 
 import { DonationsapiservicesService } from '../service/donationsapiservices.service';
-import { render } from 'creditcardpayments/creditCardPayments';
+// import { render } from 'creditcardpayments/creditCardPayments';
 
 declare let paypal:any;
 
@@ -55,6 +55,8 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
       })
     }
   }
+
+  
 
   addPaypalScript() {
     this.addScript = true;
