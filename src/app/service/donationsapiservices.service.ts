@@ -38,4 +38,11 @@ export class DonationsapiservicesService {
   //   return this._http.get(this.charityByIdUrl)
   // }
 
+  // Posting donations
+  donationsUrl = 'https://donationapp254.herokuapp.com/api/donations/';
+
+  donationsMade(userData:any):Observable<any> {
+    return this._http.post(this.donationsUrl, userData);
+  }
+
 }

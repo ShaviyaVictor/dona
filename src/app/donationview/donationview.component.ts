@@ -107,6 +107,8 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
   charityDisplayed: Array<any> = [];
   charity: any;
 
+  sent: any
+
   ngOnInit(): void {
 
     // this._service.charityProp().subscribe((data)=>{
@@ -147,7 +149,23 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
 
     });
 
-  })
+    });
+
+    this.sent = {
+
+      amount: '',
+
+    };
+
+  }
+
+  donation(){
+
+    this._service.donationsMade(this.sent).subscribe((userData)=>{
+      alert('Amount ' + this.sent.amount + ' USD has been posted successfully.')
+    },
+    // error => console.log('error', error)
+    );
 
   }
 
