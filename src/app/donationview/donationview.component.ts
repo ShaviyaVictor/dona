@@ -109,7 +109,7 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
   charityDisplayed: Array<any> = [];
   charity: any;
 
-  sent: any
+  sent: any;
 
   ngOnInit(): void {
 
@@ -165,7 +165,9 @@ export class DonationviewComponent implements OnInit, AfterViewChecked {
 
     this._service.donationsMade(this.sent).subscribe((userData)=>{
       // alert('Amount ' + this.sent.amount + ' USD has been posted successfully.')
-      console.warn('It is all good')
+      // alert('It is all good')
+      console.log(userData)
+
     },
     // error => console.log('error', error)
     );
