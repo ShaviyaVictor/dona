@@ -32,13 +32,27 @@
 
 
         <!-- Navbar Right Side section -->
-        <div class="navbar-nav font-weight-light h4">
 
-          <a class="nav-item nav-link text-white" routerLink="login">
-            Register/Login
-          </a>
-
+        <div class="navbar-nav font-weight-light h4" *ngIf="isLoggedOut">    
+            
+          <a class="nav-item nav-link" routerLink="login">
+            Register/Login 
+          </a>                 
+          
+        </div> 
+        <div class="dropdown" *ngIf="isLoggedIn">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ username }}
+          </button>
+          
+          <div class="dropdown-menu bg-secondary">
+            <a class="nav-item nav-link mr-5 text-white" style="cursor:pointer;" (click)="logout()" >
+              LogOut
+            </a> 
+          </div>
         </div>
+         
+
       </div>
     </div>
 
