@@ -83,8 +83,22 @@
 </section>
 
 <!-- Looping through trial -->
-
-<div class="container">
+grace
+<div class="drop container">
+  <div class="row my-2">
+    <div class="col-md-3 d-none d-md-block" *ngFor='let charity of charitiesDisplay'>
+      <!-- <a href="#" class="img" style="background-image: url(https://res.cloudinary.com/gracemwende/{{charity.charity_image}});"></a> -->
+  <a [routerLink]="['/donation/'+charity.id]">
+    <img src="https://res.cloudinary.com/gracemwende/{{ charity.charity_image }}" class="img" alt="{{charity.location}}">
+  </a>
+      <div class="text">
+  <a [routerLink]="['/donation/'+charity.id]" class="huvaLink">{{charity.charity.user_name}}</a>
+        <!-- <span>Architect</span> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col-md-3 mb-4" *ngFor='let charity of charitiesDisplay'>
       <div class="card mt-4">
@@ -92,7 +106,7 @@
           <img src="https://res.cloudinary.com/gracemwende/{{ charity.charity_image }}" class="card-img-top" alt="{{charity.location}}" style="height:24vh">
         </a>
         
-        <!-- (click)="getData()"  -->
+       
         <div class="card-body text-center">
           <a [routerLink]="['/donation/'+charity.id]">
             <h5 class="card-title text-white huvaLink">{{charity.charity.user_name}}</h5>
@@ -101,7 +115,7 @@
       </div>      
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- End of iteration -->
 

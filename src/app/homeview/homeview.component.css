@@ -1,3 +1,39 @@
+.drop{
+  border: none;
+  background: white;
+  -webkit-box-shadow: 0px 10px 34px -20px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 10px 34px -20px rgba(0,0,0,0.41);
+  box-shadow: 0px 10px 34px -20px rgba(0,0,0,0.41);
+  border-radius: 4px;
+  width: 100%;
+}
+  .img{
+    width: 100%;
+    display: block;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  
+    h3{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;}
+      a{
+        color: black;
+      }
+    
+    span{
+      font-size: 14px;
+      color: rgba(0,0,0,.2);
+    }
+  
+  @include media-breakpoint-down(md){
+    background: #202020;
+    padding: 0 !important;
+  }
+
+
+
 .img1 {
   background-image:  linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)), url(../../assets/Image-1.jpg);
   background-size: cover;
@@ -46,7 +82,7 @@
 
 .huvaLink {
   font-family: 'Noto Serif', serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .charity_form{
