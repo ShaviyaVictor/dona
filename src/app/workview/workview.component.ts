@@ -44,6 +44,7 @@ export class WorkviewComponent implements OnInit {
       this.ourWorkService.addBeneficiary2(this.f['title'].value,this.f['description'].value,this.f['user_image'].value,).pipe(first()).subscribe(
       (data:any)=>{
         this.router.navigate(['/work']);
+        this.reloadPage()
         console.log(data);
       }
       )
@@ -53,6 +54,10 @@ export class WorkviewComponent implements OnInit {
       this.router.navigate([`${pageName}`])
     }
   
+    reloadPage(): void {
+
+      window.location.reload();
+    }
     
     addBeneficiaries(){
       // const formData = new FormData();
