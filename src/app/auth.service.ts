@@ -15,6 +15,7 @@ const httpOptions={
 export class AuthService {
 
   api_url='http://donationapp254.herokuapp.com/';
+  auth_api='https://donationapp254.herokuapp.com/api-auth';
 
 
   constructor( private http:HttpClient) { }
