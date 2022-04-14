@@ -41,7 +41,12 @@
 
 .huvaLink:hover {
   color: #33ACCB !important;
-  text-decoration: underline #33ACCB;
+  text-decoration: none !important;
+}
+
+.huvaLink {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
 }
 
 .charity_form{

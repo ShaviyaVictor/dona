@@ -23,6 +23,10 @@
   margin: 1rem;
 }
 
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 
 
 

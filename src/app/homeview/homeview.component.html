@@ -88,11 +88,11 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col-md-3 mb-4" *ngFor='let charity of charitiesDisplay'>
       <div class="card mt-4">
-        <a  [routerLink]="['/donation/'+charity.id]">        
-          <img src="https://res.cloudinary.com/gracemwende/{{ charity.charity_image }}" class="card-img-top" alt="{{charity.location}}" style="height: 30vh;">
+        <a [routerLink]="['/donation/'+charity.id]">        
+          <img src="https://res.cloudinary.com/gracemwende/{{ charity.charity_image }}" class="card-img-top" alt="{{charity.location}}" style="height:24vh">
         </a>
         
-     
+        <!-- (click)="getData()"  -->
         <div class="card-body text-center">
           <a [routerLink]="['/donation/'+charity.id]">
             <h5 class="card-title text-white huvaLink">{{charity.charity.user_name}}</h5>
