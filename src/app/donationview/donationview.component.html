@@ -18,7 +18,8 @@
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="number" [(ngModel)]="finalAmount" #amount class="form-control" id="amount" placeholder="50">
+        <!-- [(ngModel)]="sent.amount"  -->
+        <input type="number" [(ngModel)]="finalAmount" #amount class="form-control" id="amount" placeholder="50" value="200">
         <div class="input-group-append">
           <select #frequency class="custom-select" id="selection" required>
             <option selected disabled hidden value="">Giving frequency</option>
@@ -90,11 +91,12 @@
           </div>
         </div>
         <div class="row d-flex justify-content-center pt-3">
-          
-          <div class="btn-lg-lg" id="myPaypalButtons">
-            <!-- <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button> -->
-          </div>
-
+          <!-- (click)="donating()" -->
+          <a href="" (click)="donating()">
+            <div class="btn-lg-lg" id="myPaypalButtons">
+              <!-- <button type="submit" class="floating btn btn-warning ml-3 mb-3 btn-lg" routerLink="donation"> PAYPAL <i class="bi bi-paypal"></i></button> -->
+            </div>
+          </a>
         </div>
         <!-- <div class="row d-flex justify-content-center pt-1">
           <h5>

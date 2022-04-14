@@ -15,7 +15,8 @@ import { WorkviewComponent } from './workview/workview.component';
 import { AboutviewComponent } from './aboutview/aboutview.component';
 import { PaymentviewComponent } from './paymentview/paymentview.component';
 import { UserRegisterService } from './service/user-register.service';
-import { DonationsapiservicesService } from './service/donationsapiservices.service'
+import { DonationsapiservicesService } from './service/donationsapiservices.service';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DonationsapiservicesService } from './service/donationsapiservices.serv
     DonationviewComponent,
     WorkviewComponent,
     AboutviewComponent,
-    PaymentviewComponent
+    PaymentviewComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
