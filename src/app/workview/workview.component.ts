@@ -38,6 +38,12 @@ export class WorkviewComponent implements OnInit {
       return this.beneficiary.controls;
     }
   
+    // file:any
+    // onFileSelected(e:any) {
+    //   this.file = e.target.files[0];
+    //   console.log(this.file)
+  
+    // }
     onSubmit(){
 
       console.log("Output",this.beneficiary.value);
@@ -65,4 +71,8 @@ export class WorkviewComponent implements OnInit {
     
   })
     }
+
+changeSource(event:any) {      
+  event.target.src = "https://res.cloudinary.com/gracemwende/image/upload/v1649917811/default_ctf6ds.jpg";
+}
 }
