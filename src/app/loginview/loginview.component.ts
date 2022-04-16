@@ -61,8 +61,10 @@ export class LoginviewComponent implements OnInit {
             this.roles = this.usertoken.getUser().username;
             this.email = this.usertoken.getUser().email;
             
-            this.router.navigate(['']);
-            this.reloadPage();
+            this.router.navigate(['']).then(() => {
+              window.location.reload();
+            })
+            // this.reloadPage();
             
           },
           (error:any) => {
