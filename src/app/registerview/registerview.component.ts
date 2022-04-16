@@ -37,8 +37,8 @@ export class RegisterviewComponent implements OnInit {
   registration(){
 
     this._service.registeredProps(this.register).subscribe((userData:any)=>{
-console.log("Details",userData);
-console.log("Details",this.register.is_donor);
+      console.log("Details",userData);
+      console.log("Details",this.register.is_donor);
 
       alert('User ' + this.register.user_name + ' has been created successfully.')
     },

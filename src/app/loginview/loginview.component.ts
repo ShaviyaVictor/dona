@@ -61,10 +61,12 @@ export class LoginviewComponent implements OnInit {
             this.roles = this.usertoken.getUser().username;
             this.email = this.usertoken.getUser().email;
             
+
             this.router.navigate(['']).then(() => {
               window.location.reload();
             })
             // this.reloadPage();
+
             
           },
           (error:any) => {
@@ -75,6 +77,11 @@ export class LoginviewComponent implements OnInit {
           }
         );
       }
+
+      // homePgRedirect(pageName:string) {
+      //   this.router.navigate([`${pageName}`])
+      // }
+      // (click)="homePgRedirect('')"
     
       reloadPage(): void {
 
