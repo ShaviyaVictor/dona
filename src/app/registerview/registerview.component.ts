@@ -11,20 +11,6 @@ import { UserRegisterService } from '../service/user-register.service';
 })
 export class RegisterviewComponent implements OnInit {
 
-  // registerForm = new FormGroup({
-
-  //   firstN: new FormControl(''),
-  //   lastN: new FormControl(''),
-  //   userN: new FormControl(''),
-  //   email: new FormControl(''),
-  //   password: new FormControl(''),
-  //   password2: new FormControl(''),
-
-  // });
-
-  // registerUser() {
-  //   console.warn(this.registerForm)
-  // }
 
   register:any;
 
@@ -40,6 +26,9 @@ export class RegisterviewComponent implements OnInit {
       email: '',
       password: '',
       password1: '',
+      is_admin:false,
+      is_donor:false,
+      is_charity:false,
 
     };
 
@@ -47,10 +36,13 @@ export class RegisterviewComponent implements OnInit {
 
   registration(){
 
-    this._service.registeredProps(this.register).subscribe((userData)=>{
+    this._service.registeredProps(this.register).subscribe((userData:any)=>{
+      console.log("Details",userData);
+      console.log("Details",this.register.is_donor);
+
       alert('User ' + this.register.user_name + ' has been created successfully.')
     },
-    // error => console.log('error', error)
+    error => console.log('error', error)
     );
 
   }

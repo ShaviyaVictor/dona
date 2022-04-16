@@ -1,0 +1,63 @@
+<!-- Start of the NavBar -->
+
+<header class="site-header">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel">
+
+    <div class="container">
+      <a class="mr-5 h2 display-4" routerLink="">
+        <!-- <p class="logo fw-bolder text-secondary">
+          Dona
+        </p> -->
+        <span class="brand1">DO<span class="brand2">NA</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+        aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto h5 font-weight-light">
+
+          <a class="nav-item nav-link text-white mr-5" routerLink="">
+            Gift Catalogue
+          </a>
+          <a class="nav-item nav-link text-white mr-5" routerLink="work">
+            Our Work
+          </a>
+          <a class="nav-item nav-link text-white mr-5" routerLink="about">
+            About Us
+          </a>
+
+        </div>
+
+
+        <!-- Navbar Right Side section -->
+
+        <div class="navbar-nav font-weight-light h4" *ngIf="isLoggedOut">    
+            
+          <a class="nav-item nav-link" routerLink="login">
+            Register/Login 
+          </a>                 
+          
+        </div> 
+        <div class="dropdown" *ngIf="isLoggedIn">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ username }}
+          </button>
+          
+          <div class="dropdown-menu bg-secondary">
+            <a class="nav-item nav-link mr-5 text-white" style="cursor:pointer;" (click)="logout()" >
+              LogOut
+            </a> 
+          </div>
+        </div>
+         
+
+      </div>
+    </div>
+
+  </nav>
+
+</header>
+
+<!-- End of NavBar -->

@@ -1,0 +1,38 @@
+.logo {
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0.3em;
+}
+
+.brand2 {
+  color: #007bff;
+}
+
+.brand1 {
+  color: #ffc107;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .nav-link{
+  color:#ffc107;
+} */
+a:hover {
+  color: #ffc107 !important;
+}
+
+.navbar-expand-md>.container>.navbar-collapse>.navbar-nav>.nav-item>.nav-link {
+  color: #ffc107;
+}
+
+/* .site-header .navbar-nav .nav-link:hover {
+  text-decoration: underline 3px;
+} */
+
+.site-header .navbar {
+  background-color: #03010c;
+}
+
+/* End of NavBar styles */

@@ -38,12 +38,19 @@ export class WorkviewComponent implements OnInit {
       return this.beneficiary.controls;
     }
   
+    // file:any
+    // onFileSelected(e:any) {
+    //   this.file = e.target.files[0];
+    //   console.log(this.file)
+  
+    // }
     onSubmit(){
 
       console.log("Output",this.beneficiary.value);
       this.ourWorkService.addBeneficiary2(this.f['title'].value,this.f['description'].value,this.f['user_image'].value,).pipe(first()).subscribe(
       (data:any)=>{
         this.router.navigate(['/work']);
+        this.reloadPage()
         console.log(data);
       }
       )
@@ -53,6 +60,10 @@ export class WorkviewComponent implements OnInit {
       this.router.navigate([`${pageName}`])
     }
   
+    reloadPage(): void {
+
+      window.location.reload();
+    }
     
     addBeneficiaries(){
       // const formData = new FormData();
@@ -65,4 +76,8 @@ export class WorkviewComponent implements OnInit {
     
   })
     }
+
+changeSource(event:any) {      
+  event.target.src = "https://res.cloudinary.com/gracemwende/image/upload/v1649917811/default_ctf6ds.jpg";
+}
 }
