@@ -36,4 +36,17 @@ export class OurWorkService {
       map((work:any)=>{}));
   }
 
+  // addBeneficiary2(title:string,description:string,file:any){
+  //   const body = new FormData();
+  //   body.append('title',title)
+  //   body.append('description',description)
+  //   body.append('files', file, file.name);
+  //   console.log('fakepath',body)
+
+
+  //   return this.http.post<any>(this.api_url + 'api/beneficiaries/',
+  //   {body },httpOptions ).pipe(
+  //     map((work:any)=>{}));
+  // }
+
 }
