@@ -1,5 +1,5 @@
 .top_section{
-    background-image: url('/assets/image-13.png');
+    background-image: url('../../assets/image-13.png');
     height: 50vh !important;
    background-size: cover;
    background-repeat: no-repeat;
@@ -11,7 +11,7 @@
     line-height: 40px;
 }
 .bottom_section{
-    background-image: url('/assets/image-12.png');
+    background-image: url('../../assets/image-12.png');
     min-height: 60vh !important;
    background-size: cover;
    background-repeat: no-repeat;
