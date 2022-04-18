@@ -11,18 +11,14 @@ const httpOptions={
   providedIn: 'root'
 })
 export class OurWorkService {
-  api_url='http://donationapp254.herokuapp.com/';
+  api_url='https://donationapp254.herokuapp.com/';
 
 
   constructor( private http:HttpClient) { }
 
   ourWork():Observable<any>{
     return this.http.get(this.api_url+ 'api/beneficiaries/')
-    .pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
+    
   }
 
   addBeneficiary(newBeneficiary:any):Observable<any>{
