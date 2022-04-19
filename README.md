@@ -9,10 +9,11 @@ This is a Pro-Dev group12 project for Moringa School.
 The goal is to create a platform that allows users to donate to  charity/charities such as this one  regularly, to enable the organization to meet their goals.
 
 #### Site links
-The project was deployed to GitHub pages for publication.       
-- To view the [project's Live Site](https://shaviyavictor.github.io/dona/).     
-- To view the [project's Google Slides](https://docs.google.com/presentation/d/1GVrFM-uUvDkyYuAWa3hidGeB6kresJ4E7SkKYbWkm6E/edit#slide=id.p).      
-- To view the [project's Figma Mockup](https://www.figma.com/file/6pW09ap3pxsKcDuoqgPcIZ/Donation-Platform?node-id=15%3A451).            
+Below are the project's links to various resourecs from the Requirements to the Deployment link.         
+- To view the [project's Requirements](https://docs.google.com/document/d/1YwuVeIh2TdnHOIOvMpXJ7LETcQG9Z0VVESfeh9quM6M/edit).             
+- To view the [project's Figma Mockup](https://www.figma.com/file/6pW09ap3pxsKcDuoqgPcIZ/Donation-Platform?node-id=15%3A451).              
+- To view the [project's Google Presentation Slides](https://docs.google.com/presentation/d/1GVrFM-uUvDkyYuAWa3hidGeB6kresJ4E7SkKYbWkm6E/edit#slide=id.p).             
+- To view the [project's Live Site](https://shaviyavictor.github.io/dona/).          
 
 #### Authors
 **Abzed Abdul - Project Lead**       
