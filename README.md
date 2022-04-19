@@ -8,9 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This is a Pro-Dev group12 project for Moringa School.         
 The goal is to create a platform that allows users to donate to  charity/charities such as this one  regularly, to enable the organization to meet their goals.
 
-#### Live link to site
-The project was deployed to GitHub pages for publication.     
-To view the [project's live site](#).
+#### Site links
+The project was deployed to GitHub pages for publication.       
+- To view the [project's Live Site](https://shaviyavictor.github.io/dona/).     
+- To view the [project's Google Slides](https://docs.google.com/presentation/d/1GVrFM-uUvDkyYuAWa3hidGeB6kresJ4E7SkKYbWkm6E/edit#slide=id.p).      
+- To view the [project's Figma Mockup](https://www.figma.com/file/6pW09ap3pxsKcDuoqgPcIZ/Donation-Platform?node-id=15%3A451).            
 
 #### Authors
 **Abzed Abdul - Project Lead**       
