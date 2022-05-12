@@ -21,7 +21,7 @@ Below are the project's links to various resourecs from the Requirements to the 
 **Victor Shaviya**       
 **David Kibet**       
 **Yahya Noor**       
-Moringa School Core Students.
+Moringa School Core -> Pro Dev Students.
 
 ## Project Setup Instructions
 - Open Terminal {Ctrl+Alt+T}     
